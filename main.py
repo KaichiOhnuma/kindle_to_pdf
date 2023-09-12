@@ -5,6 +5,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 from PIL import Image
 from tqdm import tqdm
+from getpass_asterisk.getpass_asterisk import getpass_asterisk
 import time
 import os
 import img2pdf
@@ -118,7 +119,7 @@ class Kindle_to_pdf(object):
 
 if __name__ == "__main__":
     email = input("email: ")
-    password = input("password: ")
+    password = getpass_asterisk("password: ")
 
     book_title = "The Hunger Game"
     page_count = 300
